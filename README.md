@@ -1,4 +1,9 @@
 # AFiLM
+
+##为了鼠大的信号2项目给原repo加了数据下载来方便在云gpu上跑，现archive
+##add data folder form kuleshov / audio-super-res . And now archive after my course finish.
+
+
 ### [Paper arXiv](https://arxiv.org/abs/2108.11637)
 ## MLSP 2021 Self-Attention for Audio Super-resolution 
 
