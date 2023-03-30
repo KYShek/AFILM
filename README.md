@@ -2,6 +2,21 @@
 
 为了鼠大的信号2项目给原repo加了数据下载来方便在云gpu上跑，现archive
 
+## 宗文似用方法
+写给哈哈群和sbu-scie的你们
+
+### 环境准备 
+命令行输入
+```
+git clone https://https://github.com/KYShek/AFILM
+```
+```
+cd AFILM
+```
+```
+pip install -r requirements.txt
+```
+
 Add data folder from [kuleshov/audio-super-res](https://github.com/kuleshov/audio-super-res) . And now archive after my course finish.
 
 ##
