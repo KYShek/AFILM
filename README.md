@@ -17,6 +17,8 @@ Additional packages:
 - `h5py==3.1.0`
 - `numpy==1.19.5`
 - `scipy==1.4.1`
+- `librosa==0.9.1`
+
 
 ### Data
 Data preparation is the same as [TFiLM](https://github.com/kuleshov/audio-super-res) . The main dataset is VCTK speech. The model expects `.h5` archives contaning pairs of high and low resolution sound patches. 
