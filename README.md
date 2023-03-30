@@ -26,6 +26,82 @@ cd ./data/vctk
 ```
 make
 ```
+```
+cd speaker1
+```
+```
+make
+```
+*若数据集生成不成功*
+执行以下命令：
+```
+python ../prep_vctk.py \
+  --file-list  speaker1-train-files.txt \
+  --in-dir ../VCTK-Corpus/wav48/p225 \
+  --out vctk-speaker1-train.4.16000.8192.4096.h5 \
+  --scale 4 \
+  --sr 16000 \
+  --dimension 8192 \
+  --stride 4096 \
+  --interpolate \
+  --low-pass
+
+python ../prep_vctk.py \
+  --file-list speaker1-val-files.txt \
+  --in-dir ../VCTK-Corpus/wav48/p225 \
+  --out vctk-speaker1-val.4.16000.8192.4096.h5 \
+  --scale 4 \
+  --sr 16000 \
+  --dimension 8192 \
+  --stride 4096 \
+  --interpolate \
+  --low-pass
+
+python ../prep_vctk.py \
+  --file-list  speaker1-train-files.txt \
+  --in-dir ../VCTK-Corpus/wav48/p225 \
+  --out vctk-speaker1-train.4.16000.-1.4096.h5 \
+  --scale 4 \
+  --sr 16000 \
+  --dimension -1 \
+  --stride 4096 \
+  --interpolate \
+  --low-pass
+
+python ../prep_vctk.py \
+  --file-list speaker1-val-files.txt \
+  --in-dir ../VCTK-Corpus/wav48/p225 \
+  --out vctk-speaker1-val.4.16000.-1.4096.h5 \
+  --scale 4 \
+  --sr 16000 \
+  --dimension -1 \
+  --stride 4096 \
+  --interpolate \
+  --low-pass
+```
+### 训练
+```
+cd ../../../
+```
+```
+cd codes
+```
+```
+python train.py \
+   --model afilm \
+   --train ../data/vctk/speaker1/vctk-speaker1-train.4.22050.8192.4096.h5 \
+   --val ../data/vctk/speaker1/vctk-speaker1-val.4.22050.8192.4096.h5 \
+   -e 2 \
+   --batch-size 64 \
+   --logname singlespeaker \
+   --layers 4 \
+   --lr 3e-4 \
+   --save_path model.h5 \
+   --r 4 \
+   --pool_size 2 \
+   --strides 2
+```
+###
 
 ##
 ### [Paper arXiv](https://arxiv.org/abs/2108.11637)
