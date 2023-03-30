@@ -101,6 +101,8 @@ python train.py \
    --pool_size 2 \
    --strides 2
 ```
+项目软件部分指路：[KYShek/audio_sup_res_python](https://github.com/KYShek/audio_sup_res_python)
+
 ###
 
 ##
