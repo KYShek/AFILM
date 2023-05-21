@@ -8,6 +8,8 @@ Add data folder from [kuleshov/audio-super-res](https://github.com/kuleshov/audi
 写给哈哈群和sbu-scie的你们
 
 ### 环境准备 
+python版本为3.7
+
 命令行输入
 ```
 git clone https://https://github.com/KYShek/AFILM
